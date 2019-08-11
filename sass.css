@@ -1,0 +1,281 @@
+$main-font: 'Anton',sans-serif;
+$black-color: #000;
+
+
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.background{
+    background-color: #D2CCE2;   /* #F2E4DC; */
+    height: 60.2rem;
+  
+}
+/* 
+.header {
+    background-color: black;
+    border: 5px solid red;
+    height: 1080px;
+    opacity: 0.4;
+    transition: transform 0.6s;
+} */
+
+.header {
+   
+
+
+
+/* start nav */
+.toggle {
+    position: fixed;
+    top: 35px;
+    right: 100px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: $black-color;
+    cursor: pointer;
+    z-index: 1;
+ }
+
+
+.toggle:before {
+    content: '+';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 50px;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    background: $black-color;
+    transform: 0.5s;
+
+}
+
+.toggle.active:before {
+
+    transform: rotate(405deg);
+    /* background: #ffeb3b; */
+     color: rgba(241, 2, 54, 0.835); 
+
+    }
+
+
+
+.overlay {
+    position: fixed;
+    top: 35px;
+    right: 100px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(17, 23, 87, 0.822); /* rgba(0, 0, 0, .95) */
+    transition: transform 0.6s;
+     }
+
+.overlay.active {
+    transform: scale(100, 100);
+    }
+
+
+
+.menu {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 1;
+    visibility: hidden;
+ }
+
+
+.menu.active {
+    visibility: visible;
+    transition-delay: 0.3s;
+}
+
+.menu ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0px; }
+
+
+.menu ul li {
+    list-style-type: none;
+    padding: 20px; }
+
+
+.menu ul li a {
+    background-color: $black-color;
+    padding: 15px 25px;
+    position: relative;
+    font-size: 48px;
+    text-decoration: none;
+    color: #fff;
+    margin: 20px 0;
+    display: block;
+    font-weight: bold;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+    letter-spacing: 6px;
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    
+    /* do not forget to set the font  */
+}
+
+.menu ul li a:before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: -10px;
+    width: 100%;
+    height: 20px;
+    background: rgb(243, 214, 148);
+    z-index: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.menu ul li a:hover:before {
+    transform: scaleX(1);
+        }
+  
+
+
+/* end nav */
+
+
+
+
+
+
+/* start logo */
+.logo {
+    margin: 35px;
+    padding-left: 10rem;
+    font-family: $main-font;
+    font-weight: bold;
+}
+/* end logo */
+
+
+
+
+
+
+
+/* start content */
+.content {
+    display: inline-block;
+    margin-top: 12rem;
+    /*  padding-left: 15rem; */
+    float: left;
+ }
+ 
+
+
+.content h1 {
+    align-items: center;
+    font-family: $main-font;
+    font-size: 70px;
+    padding-left: 19rem;
+}
+
+.content h2 {
+    align-items: center;
+    font-family: $main-font;
+    font-size: 70px;
+    padding-left: 10.5rem;
+}
+
+.content p {
+    font-size: 30px;
+    letter-spacing: 3px;
+    padding-left: 17rem;
+
+}
+
+
+
+.content .butt {
+    padding-top: 2.5rem;
+    padding-left: 17.5rem; }
+
+
+.content .butt .one {
+    background-color: $black-color;
+    padding: 21px 63px;
+    border-radius: 30px;
+    border: 0;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.4s;
+
+}
+
+.content .butt .two {
+    background-color: transparent;
+    border: 2px solid $black-color;
+    color: $black-color;
+    font-weight: bold;
+    padding: 19px 50px;
+    border-radius: 30px;
+    margin-left: 40px;
+    transition: 0.4s;
+    cursor: pointer;
+/* you should fix it ! */
+ } 
+
+
+
+
+
+.content .icon {
+    font-size: 30px; 
+    padding-top: 3rem;
+    padding-left: 17.9rem;  }
+   
+
+
+.content .icon i{
+    margin: 0.5rem;
+    color: rgba(17, 23, 87, 0.835);
+}
+
+
+.content .butt .one:hover {
+    background-color:rgba(17, 23, 87, 0.835);
+    color: #fff;   
+}
+
+.content .butt .two:hover {
+    background-color: rgba(17, 23, 87, 0.835);
+    color: #fff;
+}
+
+.content .icon i:hover {
+    transition: 0.3s;
+    font-size: 35px;
+    }
+  
+
+
+/* end content */
+
+
+.img {
+    float: right;
+    padding-right: 16rem;
+    margin-top: 5rem;
+}
+
+}
